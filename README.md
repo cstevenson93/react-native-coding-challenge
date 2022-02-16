@@ -1,36 +1,32 @@
-# TypeScript Example
+# Telus Agriculture Coding Challenge
 
-<p>
-  <!-- iOS -->
-  <img alt="Supports Expo iOS" longdesc="Supports Expo iOS" src="https://img.shields.io/badge/iOS-4630EB.svg?style=flat-square&logo=APPLE&labelColor=999999&logoColor=fff" />
-  <!-- Android -->
-  <img alt="Supports Expo Android" longdesc="Supports Expo Android" src="https://img.shields.io/badge/Android-4630EB.svg?style=flat-square&logo=ANDROID&labelColor=A4C639&logoColor=fff" />
-  <!-- Web -->
-  <img alt="Supports Expo Web" longdesc="Supports Expo Web" src="https://img.shields.io/badge/web-4630EB.svg?style=flat-square&logo=GOOGLE-CHROME&labelColor=4285F4&logoColor=fff" />
-</p>
+This is a blank React Native Expo starter project to test potential developers.  It includes a simple api server for your React Native application to consume and persist data from.
 
-```sh
-npx create-react-native-app -t with-typescript
-```
+## Prerequisites
 
-TypeScript is a superset of JavaScript which gives you static types and powerful tooling in Visual Studio Code including autocompletion and useful inline warnings for type errors.
+- Installation of NodeJs 16.x
+- Git
+- Code Editor IDE (Visual Studio Code, Webstorm, etc...)
 
-## 🚀 How to use
+## Installation
 
-#### Creating a new project
+- Fork the project to your Github Account (sign up for one if you don't have one)
+- Clone the project from your Github account (Not Telus Agriculture's) to your local machine.  You will be submitting your code for review from your repository
+- Run `npm install` to install the latest dependencies
 
-- Install the CLI: `npm i -g expo-cli`
-- Create a project: `npx create-react-native-app -t with-typescript`
-- `cd` into the project
+## API Server
 
-### Adding TypeScript to existing projects
+Run `npm run start:api` for the api server.  Navigate to [http://localhost:4500/](http://localhost:4500/) to explore the api server.  It includes basic endpoints for a "people" object.
 
-- Create a blank TypeScript config: `touch tsconfig.json`
-- Run `expo start` to automatically configure TypeScript
-- Rename files to TypeScript, `.tsx` for React components and `.ts` for plain typescript files
+- GET    /people    [http://localhost:4500/people](http://localhost:4500/people)
+- GET    /people/1  [http://localhost:4500/people/6026f08fffabf364acbfca9a](http://localhost:4500/people/6026f08fffabf364acbfca9a)
+- POST   /people
+- PUT    /people/1
+- PATCH  /people/1
+- DELETE /people/1
 
-> 💡 You can disable the TypeScript setup in Expo CLI with the environment variable `EXPO_NO_TYPESCRIPT_SETUP=1 expo start`
+To learn more about the json server, visit [json-server](https://www.npmjs.com/package/json-server)
 
-## 📝 Notes
+## Development server
 
-- [Expo TypeScript guide](https://docs.expo.dev/versions/latest/guides/typescript/)
+Run `npm run start` to start the metro server. Choose to develop on ios, android or the web.  In the web navigate to [http://localhost:19006/](http://localhost:19006/). The app will automatically reload if you change any of the source files.
