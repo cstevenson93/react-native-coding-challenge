@@ -8,13 +8,24 @@ export default class personEditPage extends Component {
   constructor() {
       super();
       this.state = {
-          isLoading: false,
+          isLoading: false
+          
         };
     }
+
+
+componentWillMount= async() =>{
+  var person = this.props.navigation.state.params.person;
+
+  this.setState({
+    personInfo: person
+  })
+}
 
 // handles the mount information, setting session variables, etc
 componentDidMount= async() =>{
 
+  
     
 }
 
@@ -37,7 +48,7 @@ componentDidMount= async() =>{
         return (  
             
         <View style={styles.container}>
-      <Text>Telus AG Coding Challenge </Text>
+      <Text>{this.state.personInfo.name}</Text>
       </View>
             
         );  

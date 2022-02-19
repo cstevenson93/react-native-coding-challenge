@@ -108,7 +108,7 @@ assignDataToTable = async (peopleList) =>{
 
 onPressItem = (personInfo) => {
 console.log("Person Info Name: " + personInfo.name);
-  this.props.navigation.navigate('personEditPage');
+  this.props.navigation.navigate('personEditPage', { person: personInfo});
 }
 
 
